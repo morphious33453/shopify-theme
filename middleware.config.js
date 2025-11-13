@@ -12,8 +12,8 @@ module.exports = {
           blogs: '/blogs',
           articles: '/articles'
         },
-        currency: 'CAD',
-        country: 'CA'
+        currency: 'USD',
+        country: 'US'
       }
     }
   }
