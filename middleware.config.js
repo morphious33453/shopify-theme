@@ -6,7 +6,7 @@ module.exports = {
         api: {
           domain: process.env.SHOPIFY_DOMAIN,
           storefrontAccessToken: process.env.SHOPIFY_STOREFRONT_TOKEN,
-          apiVersion: "2022-01"
+          apiVersion: "2024-01"
         },
         cms: {
           blogs: '/blogs',
