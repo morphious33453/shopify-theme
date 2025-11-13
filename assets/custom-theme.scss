@@ -1,0 +1,166 @@
+// Niagara Stands Out Custom Theme
+// Based on live store at niagarastandsout.ca
+
+// Brand Colors
+:root {
+  // Primary Colors (Burnt Orange/Red)
+  --c-primary: rgb(196, 48, 28);
+  --c-primary-hover: rgb(168, 40, 24);
+  --c-primary-variant: rgb(220, 60, 35);
+
+  // Purple Gradient
+  --c-purple-start: rgb(102, 126, 234);
+  --c-purple-end: rgb(118, 75, 162);
+
+  // Secondary Colors
+  --c-secondary: rgb(102, 126, 234);
+  --c-secondary-hover: rgb(90, 110, 200);
+
+  // Accent & Supporting
+  --c-accent: #5ece7b;
+  --c-text: #1d1f22;
+  --c-text-muted: #72757e;
+  --c-white: #ffffff;
+  --c-light: #f1f2f3;
+  --c-gray: #e0e0e1;
+  --c-gray-variant: #8d8f9a;
+  --c-dark-variant: #1d1f22;
+  --c-black: #000000;
+
+  // Gradient
+  --gradient-purple: linear-gradient(135deg, var(--c-purple-start) 0%, var(--c-purple-end) 100%);
+
+  // Overrides for Storefront UI
+  --button-background: var(--c-primary);
+  --button-hover-background: var(--c-primary-hover);
+  --link-color: var(--c-primary);
+  --link-hover-color: var(--c-primary-hover);
+}
+
+// Font Family (Assistant)
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+// Primary Button Style
+.sf-button--primary,
+.sf-button.color-primary {
+  background: var(--c-primary);
+  border-color: var(--c-primary);
+
+  &:hover {
+    background: var(--c-primary-hover);
+    border-color: var(--c-primary-hover);
+  }
+}
+
+// Gradient Hero Section
+.hero-gradient {
+  background: var(--gradient-purple);
+  color: var(--c-white);
+  padding: 3rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+
+  h1, h2, h3 {
+    color: var(--c-white);
+    margin-bottom: 1rem;
+  }
+}
+
+// Product Card Hover
+.sf-product-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+}
+
+// Category Cards
+.category-card {
+  background: var(--c-white);
+  border: 1px solid var(--c-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: var(--c-primary);
+    box-shadow: 0 4px 12px rgba(196, 48, 28, 0.15);
+  }
+
+  h3 {
+    color: var(--c-primary);
+    font-weight: 600;
+  }
+}
+
+// Navigation Styling
+.sf-header__navigation {
+  .sf-menu-item {
+    a {
+      color: var(--c-text);
+      font-weight: 500;
+
+      &:hover {
+        color: var(--c-primary);
+      }
+    }
+  }
+}
+
+// Badge / Label Styling
+.badge-primary {
+  background: var(--c-primary);
+  color: var(--c-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.badge-purple {
+  background: var(--gradient-purple);
+  color: var(--c-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+// Same-Day Shipping Banner
+.shipping-banner {
+  background: var(--gradient-purple);
+  color: var(--c-white);
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+// Price Styling
+.sf-price {
+  color: var(--c-primary);
+  font-weight: 700;
+}
+
+// Add to Cart Button
+.sf-add-to-cart {
+  background: var(--c-primary);
+
+  &:hover {
+    background: var(--c-primary-hover);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 1024px) {
+  .hero-gradient {
+    padding: 2rem 1rem;
+  }
+}

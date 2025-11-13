@@ -31,16 +31,16 @@
       <RelatedProducts
         :products="products"
         :loading="productsLoading"
-        title="Match it with"
+        title="Featured Products"
       />
     </LazyHydrate>
 
     <LazyHydrate when-visible>
       <SfCallToAction
-        title="Subscribe to Newsletters"
-        button-text="Subscribe"
-        description="Be aware of upcoming sales and events. Receive gifts and special offers!"
-        image="https://cdn.shopify.com/s/files/1/0407/1902/4288/files/newsletter_1240x202.jpg?v=1616496568"
+        title="Need a Custom Quote?"
+        button-text="Contact Us"
+        description="Free design service • Same-day production • No minimums • Call (289) 228-7021"
+        image=""
         class="call-to-action"
       />
     </LazyHydrate>
@@ -106,43 +106,37 @@ export default {
     return {
       heroes: [
         {
-          title: 'Colorful summer dresses are already in store',
-          subtitle: 'SUMMER COLLECTION 2021',
-          buttonText: 'Learn more',
-          background: '#eceff1',
+          title: 'Custom Signs & Printing Solutions',
+          subtitle: 'NIAGARA\'S PREMIER PRINT SHOP',
+          buttonText: 'Shop Now',
+          background: 'linear-gradient(135deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%)',
           image: {
-            mobile:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerB_328x224.jpg',
-            desktop:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerB_1240x400.jpg'
+            mobile: '',
+            desktop: ''
           },
-          link: '/c/women/women-clothing-shirts'
+          link: '/c/best-sellers'
         },
         {
-          title: 'Colorful summer dresses are already in store',
-          subtitle: 'SUMMER COLLECTION 2021',
-          buttonText: 'Learn more',
-          background: '#fce4ec',
+          title: 'NFC Review Cards - Get More 5-Star Reviews',
+          subtitle: 'TAP TO TRUST™ TECHNOLOGY',
+          buttonText: 'Learn More',
+          background: 'rgb(196, 48, 28)',
           image: {
-            mobile:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerH_328x224.jpg',
-            desktop:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerH_1240x400.jpg'
+            mobile: '',
+            desktop: ''
           },
-          link: '/c/women/women-clothing-dresses'
+          link: '/c/nfc-review-kits'
         },
         {
-          title: 'Colorful summer dresses are already in store',
-          subtitle: 'SUMMER COLLECTION 2021',
-          buttonText: 'Learn more',
-          background: '#efebe9',
+          title: 'Same-Day Printing & Rush Services',
+          subtitle: 'FAST TURNAROUND - ORDER TODAY',
+          buttonText: 'Get Quote',
+          background: 'linear-gradient(135deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%)',
           image: {
-            mobile:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerA_328x224.jpg',
-            desktop:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerA_1240x400.jpg'
+            mobile: '',
+            desktop: ''
           },
-          link: '/c/women/women-shoes-sandals',
+          link: '/contact',
           className:
             'sf-hero-item--position-bg-top-left sf-hero-item--align-right'
         }
@@ -150,61 +144,53 @@ export default {
       banners: [
         {
           slot: 'banner-A',
-          subtitle: 'Dresses',
-          title: 'Cocktail & Party',
+          subtitle: 'Custom Stickers',
+          title: 'Vinyl Decals & Labels',
           description:
-            'Find stunning women\'s cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses from all your favorite brands.',
-          buttonText: 'Shop now',
+            'Waterproof custom stickers, decals, and labels. No minimums, free design service. Perfect for branding, products, and promotions.',
+          buttonText: 'Shop Stickers',
           image: {
-            mobile:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerB_328x343.jpg',
-            desktop:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerF_332x840.jpg'
+            mobile: '',
+            desktop: ''
           },
           class: 'sf-banner--slim desktop-only',
-          link: '/c/women/women-clothing-skirts'
+          link: '/c/custom-stickers-canada'
         },
         {
           slot: 'banner-B',
-          subtitle: 'Dresses',
-          title: 'Linen Dresses',
+          subtitle: 'Heat Transfer Vinyl',
+          title: 'Custom Apparel Printing',
           description:
-            'Find stunning women\'s cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses from all your favorite brands.',
-          buttonText: 'Shop now',
+            'Professional-grade heat transfer vinyl for custom apparel and fabric printing. Bulk pricing available for resellers.',
+          buttonText: 'Shop HTV',
           image: {
-            mobile:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerE_328x343.jpg',
-            desktop:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerE_496x840.jpg'
+            mobile: '',
+            desktop: ''
           },
           class: 'sf-banner--slim banner-central desktop-only',
-          link: '/c/women/women-clothing-dresses'
+          link: '/c/heat-transfer-vinyl-canada'
         },
         {
           slot: 'banner-C',
-          subtitle: 'T-Shirts',
-          title: 'The Office Life',
+          subtitle: 'NFC Technology',
+          title: 'Tap to Review Cards',
           image: {
-            mobile:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerC_328x343.jpg',
-            desktop:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerC_332x400.jpg'
+            mobile: '',
+            desktop: ''
           },
           class: 'sf-banner--slim banner__tshirt',
-          link: '/c/women/women-clothing-shirts'
+          link: '/c/nfc-review-kits'
         },
         {
           slot: 'banner-D',
-          subtitle: 'Summer Sandals',
-          title: 'Eco Sandals',
+          subtitle: 'Best Sellers',
+          title: 'Popular Products',
           image: {
-            mobile:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerG_328x343.jpg',
-            desktop:
-              'https://cdn.shopify.com/s/files/1/0407/1902/4288/files/bannerG_332x400.jpg'
+            mobile: '',
+            desktop: ''
           },
           class: 'sf-banner--slim',
-          link: '/c/women/women-shoes-sandals'
+          link: '/c/best-sellers'
         }
       ]
     };

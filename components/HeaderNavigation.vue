@@ -1,26 +1,26 @@
 <template>
   <div class="sf-header__navigation desktop" v-if="!isMobile">
     <SfHeaderNavigationItem
-      v-for="(category, index) in categories"
+      v-for="(category, index) in categoryLinks"
       :key="index"
       class="nav-item"
-      v-e2e="`app-header-url_${category}`"
-      :label="category"
-      :link="localePath(`/c/${category}`)"
+      v-e2e="`app-header-url_${category.label}`"
+      :label="category.label"
+      :link="localePath(category.link)"
     />
   </div>
   <SfModal v-else :visible="isMobileMenuOpen">
     <SfHeaderNavigationItem
-      v-for="(category, index) in categories"
+      v-for="(category, index) in categoryLinks"
       :key="index"
       class="nav-item"
-      v-e2e="`app-header-url_${category}`"
+      v-e2e="`app-header-url_${category.label}`"
     >
       <template #mobile-navigation-item>
         <SfMenuItem
-          :label="category"
+          :label="category.label"
           class="sf-header-navigation-item__menu-item"
-          :link="localePath(`/c/${category}`)"
+          :link="localePath(category.link)"
           @click="toggleMobileMenu"
         />
       </template>
@@ -46,10 +46,17 @@ export default {
   },
   setup() {
     const { isMobileMenuOpen, toggleMobileMenu } = useUiState();
-    const categories = ['women', 'men'];
+
+    const categoryLinks = [
+      { label: 'NFC Review Cards', link: '/c/nfc-review-kits' },
+      { label: 'Custom Stickers', link: '/c/custom-stickers-canada' },
+      { label: 'Heat Transfer Vinyl', link: '/c/heat-transfer-vinyl-canada' },
+      { label: 'Best Sellers', link: '/c/best-sellers' },
+      { label: 'Contact', link: '/contact' }
+    ];
 
     return {
-      categories,
+      categoryLinks,
       isMobileMenuOpen,
       toggleMobileMenu
     };
