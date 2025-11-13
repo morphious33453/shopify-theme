@@ -1,13 +1,13 @@
 import { Module } from '@nuxt/types'
 
 const CMSBuildModule: Module = async function () {
- 
+
 
   // this.nuxt.hook('generate:before', async () => {
     const middlewareConfig = await import(this.options.rootDir + '/middleware.config.js')
     const userConfig = middlewareConfig.integrations.shopify.configuration
-  
-    this.nuxt.options.publicRuntimeConfig.cms = userConfig?.cms ?? { blogs: '/blogs', articles: '/articles' }
+
+    (this.nuxt.options.publicRuntimeConfig as any).cms = userConfig?.cms ?? { blogs: '/blogs', articles: '/articles' }
 
     this.nuxt.options.router.extendRoutes = (routes, resolve) => {
       const prefixBlogs = userConfig?.cms?.blogs
