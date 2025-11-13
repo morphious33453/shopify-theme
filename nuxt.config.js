@@ -19,7 +19,7 @@ const config = {
     { path: '/custom', handler: '~/server-middleware/custom-features.js' }
   ],
   head: {
-    title: 'Shopify | Vue Storefront Next',
+    title: 'Niagara Stands Out - Custom Signs & Printing',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -27,7 +27,7 @@ const config = {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'Custom signs, printing, and branding solutions in Niagara Region. Same-day printing, vinyl banners, window decals, and more.'
       }
     ],
     link: [
@@ -92,15 +92,15 @@ const config = {
     refreshOnResize: true
   },
   i18n: {
-    currency: 'USD',
-    country: 'US',
+    currency: 'CAD',
+    country: 'CA',
     countries: [
-      { name: 'US', label: 'United States' },
-      { name: 'DE', label: 'Germany' }
+      { name: 'CA', label: 'Canada' },
+      { name: 'US', label: 'United States' }
     ],
     currencies: [
-      { name: 'EUR', label: 'Euro' },
-      { name: 'USD', label: 'Dollar' }
+      { name: 'CAD', label: 'Canadian Dollar' },
+      { name: 'USD', label: 'US Dollar' }
     ],
     locales: [
       {
@@ -128,7 +128,7 @@ const config = {
         en: {
           currency: {
             style: 'currency',
-            currency: 'USD',
+            currency: 'CAD',
             currencyDisplay: 'symbol'
           },
           decimal: {
